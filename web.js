@@ -1,22 +1,12 @@
 
 var express = require('express');
-var fs      = requure('fs')
-var buf     = new buffer(30)
-var html    = ""
+var fs      = require('fs');
+// var buf     = new Buffer(30);
+var html    = "";
 
-fs.readFileSync('index.html',,function(err, buf))
-    {
-    if (err)
-       {
-       console.log(err);
-       html = err;
-       }
-    else
-       {
-       html = buf.toString();
-       console.log(html);
-       }
-    }
+buf  = fs.readFileSync('index.html');
+html = buf.toString();
+console.log(html);
 
 var app = express.createServer(express.logger());
 
